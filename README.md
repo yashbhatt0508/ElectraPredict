@@ -1,3 +1,74 @@
+⚡ Electricity Demand Forecasting System (XGBoost)
+An ML-powered system to predict electricity demand using historical consumption data, helping optimize energy distribution and reduce wastage.
+
+🌐 Live Demo: [Add your Streamlit link here]
+📊 Model Accuracy: R² = 0.84
+⚡ Avg Error: ~740 MW
+
+💡 Problem
+Electricity providers often face:
+
+⚠️ Over-supply → energy wastage
+⚠️ Under-supply → power shortages
+Accurate demand forecasting is critical to balance supply and demand efficiently.
+
+🚀 Solution
+Built a machine learning system that:
+
+Uses time-based + historical demand features
+Predicts future electricity demand in real-time
+Helps simulate demand scenarios
+🧠 Model
+Algorithm: XGBoost Regressor
+Why:
+Handles non-linear patterns
+Works well with time-series features
+Robust performance on tabular data
+📊 Dataset
+Source: Kaggle — Hourly Energy Consumption
+Target: AEP_MW
+Range: 12,000 – 22,000 MW
+⚙️ Features
+⏱️ Time-based
+hour, dayofweek, month, quarter
+weekend indicator
+🔁 Lag features
+lag_1 (previous hour)
+lag_24 (previous day)
+lag_168 (previous week)
+📉 Rolling stats
+rolling_mean_24 / 168
+rolling_std_24
+📈 Performance
+R² Score: 0.84
+MAE: ~740 MW
+RMSE: ~1000 MW
+👉 Error ≈ 4–6% of total demand
+
+📊 Results (Add Graphs Here)
+Actual vs Predicted graph
+Error distribution
+🖥️ Live App
+Built with Streamlit:
+
+Input time + demand features
+Get real-time prediction
+Run locally: streamlit run app.py
+
+🌍 Real-world Impact
+Reduces electricity wastage
+Prevents shortages
+Improves grid efficiency
+🧱 Tech Stack
+Python
+XGBoost
+Pandas, NumPy
+Streamlit
+🚀 Future Improvements
+Add LSTM / deep learning model
+Real-time API integration
+Region-wise prediction system
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
