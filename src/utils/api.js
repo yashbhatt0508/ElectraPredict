@@ -16,9 +16,4 @@ export const predictDemand = async (features) => {
     throw error;
   }
 };
-    throw error;
-  }
-};
-    throw error;
-  }
-};
+   
